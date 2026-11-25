@@ -65,7 +65,14 @@
         "@miorin/dsh-sidebar-brand",
         "@miorin/dsh-aggressive-sidebar",
         "@miorin/dsh-peak-pricing-sidebar"
-      ]
+      ],
+      "defaults": {
+        "@miorin/dsh-claudelike-ui": true,
+        "@miorin/dsh-hide-signed-in-card": true,
+        "@miorin/dsh-sidebar-brand": true,
+        "@miorin/dsh-aggressive-sidebar": true,
+        "@miorin/dsh-peak-pricing-sidebar": true
+      }
     }
   },
   "dependencies": {

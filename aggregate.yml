@@ -9,11 +9,16 @@ engines:
 plugins:
   - name: '@miorin/dsh-claudelike-ui'
     spec: link:../dsh-claudelike-ui
+    enabled: true
   - name: '@miorin/dsh-hide-signed-in-card'
     spec: link:../dsh-hide-signed-in-card
+    enabled: true
   - name: '@miorin/dsh-sidebar-brand'
     spec: link:../dsh-sidebar-brand
+    enabled: true
   - name: '@miorin/dsh-aggressive-sidebar'
     spec: link:../dsh-aggressive-sidebar
+    enabled: true
   - name: '@miorin/dsh-peak-pricing-sidebar'
     spec: link:../dsh-peak-pricing-sidebar
+    enabled: true

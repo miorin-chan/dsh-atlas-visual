@@ -48,6 +48,7 @@ test('inserts the five original plugin rows in order plus the aggregate runtime 
     version: 1,
     runtimeRowId: 'dsh-atlas-visual',
     plugins: names,
+    defaults: Object.fromEntries(names.map(name => [name, true])),
   })
   const rows = parseInsertRows(await read(manifest.dsh.bundle.patch))
   assert.deepEqual(rows, [
