@@ -1,0 +1,6 @@
+# Keep the local-only bundle's dependency store inside this checkout.
+storeDir: .pnpm-store
+
+# esbuild uses the platform binary from its optional dependencies.
+allowBuilds:
+  'esbuild@0.28.2': false

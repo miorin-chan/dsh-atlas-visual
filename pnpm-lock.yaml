@@ -1,0 +1,25 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@miorin/dsh-aggressive-sidebar':
+        specifier: link:../dsh-aggressive-sidebar
+        version: link:../dsh-aggressive-sidebar
+      '@miorin/dsh-hide-signed-in-card':
+        specifier: link:../dsh-hide-signed-in-card
+        version: link:../dsh-hide-signed-in-card
+      '@miorin/dsh-peak-pricing-sidebar':
+        specifier: link:../dsh-peak-pricing-sidebar
+        version: link:../dsh-peak-pricing-sidebar
+      '@miorin/dsh-sidebar-brand':
+        specifier: link:../dsh-sidebar-brand
+        version: link:../dsh-sidebar-brand
+      dsh-claudelike-ui:
+        specifier: link:../dsh-claudelike-ui
+        version: link:../dsh-claudelike-ui

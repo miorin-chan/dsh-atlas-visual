@@ -1,0 +1,78 @@
+{
+  "name": "@miorin/dsh-atlas-visual",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Customize DeepSeek Harness appearance with a Claude-like skin, sidebar brand and account card tweaks, wider right sidebar layouts, and DeepSeek pricing hours.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-bundle",
+    "visual",
+    "aggregate"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "aggregate.yml",
+    "client.js",
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "AGENTS.md",
+    "AGENTS.local.md",
+    "docs/README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-rc.5",
+    "node": "^22.18.0 || >=24.11.0"
+  },
+  "scripts": {
+    "build": "node ../../tools/dsh-aggregate/src/cli.mts generate .",
+    "prepare": "node --input-type=module -e \"import { existsSync } from 'node:fs'; import { execFileSync } from 'node:child_process'; const cli = '../../tools/dsh-aggregate/src/cli.mts'; if (existsSync(cli)) execFileSync(process.execPath, [cli, 'generate', '.'], { stdio: 'inherit' })\" 1>&2",
+    "test": "npm run build && npm run check",
+    "check": "node ../../tools/dsh-aggregate/src/cli.mts check . && node --test",
+    "prepublishOnly": "node ../../tools/dsh-aggregate/src/cli.mts verify-release ."
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-ui-plugin-manager",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    },
+    "aggregate": {
+      "version": 1,
+      "runtimeRowId": "dsh-atlas-visual",
+      "plugins": [
+        "dsh-claudelike-ui",
+        "@miorin/dsh-hide-signed-in-card",
+        "@miorin/dsh-sidebar-brand",
+        "@miorin/dsh-aggressive-sidebar",
+        "@miorin/dsh-peak-pricing-sidebar"
+      ]
+    }
+  },
+  "dependencies": {
+    "dsh-claudelike-ui": "link:../dsh-claudelike-ui",
+    "@miorin/dsh-hide-signed-in-card": "link:../dsh-hide-signed-in-card",
+    "@miorin/dsh-sidebar-brand": "link:../dsh-sidebar-brand",
+    "@miorin/dsh-aggressive-sidebar": "link:../dsh-aggressive-sidebar",
+    "@miorin/dsh-peak-pricing-sidebar": "link:../dsh-peak-pricing-sidebar"
+  }
+}

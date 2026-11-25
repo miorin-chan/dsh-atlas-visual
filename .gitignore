@@ -1,0 +1,10 @@
+/node_modules/
+/.npm-cache/
+/.pnpm-cache/
+/.pnpm-state/
+/.pnpm-store/
+/.prek/
+*.tgz
+.DS_Store
+/index.js
+/client.js

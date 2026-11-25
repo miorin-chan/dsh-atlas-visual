@@ -1,0 +1,19 @@
+name: '@miorin/dsh-atlas-visual'
+version: 0.1.0
+private: true
+description: 'Customize DeepSeek Harness appearance with a Claude-like skin, sidebar brand and account card tweaks, wider right sidebar layouts, and DeepSeek pricing hours.'
+license: MIT
+engines:
+  dsh: '>=0.2.2-rc.5'
+  node: '^22.18.0 || >=24.11.0'
+plugins:
+  - name: 'dsh-claudelike-ui'
+    spec: link:../dsh-claudelike-ui
+  - name: '@miorin/dsh-hide-signed-in-card'
+    spec: link:../dsh-hide-signed-in-card
+  - name: '@miorin/dsh-sidebar-brand'
+    spec: link:../dsh-sidebar-brand
+  - name: '@miorin/dsh-aggressive-sidebar'
+    spec: link:../dsh-aggressive-sidebar
+  - name: '@miorin/dsh-peak-pricing-sidebar'
+    spec: link:../dsh-peak-pricing-sidebar
