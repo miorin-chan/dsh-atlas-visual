@@ -11,6 +11,9 @@ importers:
       '@miorin/dsh-aggressive-sidebar':
         specifier: link:../dsh-aggressive-sidebar
         version: link:../dsh-aggressive-sidebar
+      '@miorin/dsh-claudelike-ui':
+        specifier: link:../dsh-claudelike-ui
+        version: link:../dsh-claudelike-ui
       '@miorin/dsh-hide-signed-in-card':
         specifier: link:../dsh-hide-signed-in-card
         version: link:../dsh-hide-signed-in-card
@@ -20,6 +23,3 @@ importers:
       '@miorin/dsh-sidebar-brand':
         specifier: link:../dsh-sidebar-brand
         version: link:../dsh-sidebar-brand
-      dsh-claudelike-ui:
-        specifier: link:../dsh-claudelike-ui
-        version: link:../dsh-claudelike-ui

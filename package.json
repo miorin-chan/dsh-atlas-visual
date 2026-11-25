@@ -60,7 +60,7 @@
       "version": 1,
       "runtimeRowId": "dsh-atlas-visual",
       "plugins": [
-        "dsh-claudelike-ui",
+        "@miorin/dsh-claudelike-ui",
         "@miorin/dsh-hide-signed-in-card",
         "@miorin/dsh-sidebar-brand",
         "@miorin/dsh-aggressive-sidebar",
@@ -69,10 +69,10 @@
     }
   },
   "dependencies": {
-    "dsh-claudelike-ui": "link:../dsh-claudelike-ui",
     "@miorin/dsh-hide-signed-in-card": "link:../dsh-hide-signed-in-card",
     "@miorin/dsh-sidebar-brand": "link:../dsh-sidebar-brand",
     "@miorin/dsh-aggressive-sidebar": "link:../dsh-aggressive-sidebar",
-    "@miorin/dsh-peak-pricing-sidebar": "link:../dsh-peak-pricing-sidebar"
+    "@miorin/dsh-peak-pricing-sidebar": "link:../dsh-peak-pricing-sidebar",
+    "@miorin/dsh-claudelike-ui": "link:../dsh-claudelike-ui"
   }
 }

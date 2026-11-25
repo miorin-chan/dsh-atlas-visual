@@ -7,7 +7,7 @@ engines:
   dsh: '>=0.2.2-rc.5'
   node: '^22.18.0 || >=24.11.0'
 plugins:
-  - name: 'dsh-claudelike-ui'
+  - name: '@miorin/dsh-claudelike-ui'
     spec: link:../dsh-claudelike-ui
   - name: '@miorin/dsh-hide-signed-in-card'
     spec: link:../dsh-hide-signed-in-card

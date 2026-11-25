@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = new URL('../', import.meta.url)
 const members = [
-  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: 'dsh-claudelike-ui' },
+  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: '@miorin/dsh-claudelike-ui' },
   { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card' },
   { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand' },
   { id: 'dsh-aggressive-sidebar', dir: 'dsh-aggressive-sidebar', name: '@miorin/dsh-aggressive-sidebar' },

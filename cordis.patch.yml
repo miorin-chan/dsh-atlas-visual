@@ -2,9 +2,9 @@
 # Regenerate the patch after editing aggregate.yml.
 
 - insert:
-    # dsh-claudelike-ui
+    # @miorin/dsh-claudelike-ui
     - id: dsh-claudelike-ui
-      name: 'dsh-claudelike-ui'
+      name: '@miorin/dsh-claudelike-ui'
     # @miorin/dsh-hide-signed-in-card
     - id: dsh-hide-signed-in-card
       name: '@miorin/dsh-hide-signed-in-card'
