@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Plan de mejora modular visual",
-    "description": "Aplica una apariencia al estilo de Claude, oculta la tarjeta de cuenta al iniciar sesión, personaliza u oculta la marca lateral, amplía la barra lateral derecha y muestra las horas punta y valle de DeepSeek."
+    "description": "Aplica una apariencia al estilo de Claude, oculta la tarjeta de cuenta al iniciar sesión, personaliza u oculta la marca lateral, amplía la barra lateral derecha, contrae la izquierda al iniciar y muestra las horas punta y valle de DeepSeek."
   }
 }

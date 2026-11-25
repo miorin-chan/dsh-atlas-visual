@@ -9,6 +9,7 @@ const members = [
   { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card' },
   { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand' },
   { id: 'dsh-aggressive-sidebar', dir: 'dsh-aggressive-sidebar', name: '@miorin/dsh-aggressive-sidebar' },
+  { id: 'dsh-subtle-sidebar', dir: 'dsh-subtle-sidebar', name: '@miorin/dsh-subtle-sidebar' },
   { id: 'dsh-peak-pricing-sidebar', dir: 'dsh-peak-pricing-sidebar', name: '@miorin/dsh-peak-pricing-sidebar' },
 ]
 
@@ -35,7 +36,7 @@ function parseInsertRows(patch: string) {
   return rows
 }
 
-test('inserts the five original plugin rows in order plus the aggregate runtime row', async () => {
+test('inserts the six plugin rows in order plus the aggregate runtime row', async () => {
   const manifest = JSON.parse(await read('package.json'))
   const names = members.map(member => member.name)
   assert.equal(manifest.private, true)

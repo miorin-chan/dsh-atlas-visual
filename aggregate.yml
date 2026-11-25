@@ -19,6 +19,9 @@ plugins:
   - name: '@miorin/dsh-aggressive-sidebar'
     spec: link:../dsh-aggressive-sidebar
     enabled: true
+  - name: '@miorin/dsh-subtle-sidebar'
+    spec: link:../dsh-subtle-sidebar
+    enabled: true
   - name: '@miorin/dsh-peak-pricing-sidebar'
     spec: link:../dsh-peak-pricing-sidebar
     enabled: true

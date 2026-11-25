@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Modularer Verbesserungsplan für das Erscheinungsbild",
-    "description": "Aktiviert ein Claude-ähnliches UI-Design, blendet die angemeldete Kontokarte aus, passt das Seitenleisten-Branding an, erweitert die rechte Seitenleiste und zeigt DeepSeek-Spitzen- und Nebenzeiten."
+    "description": "Aktiviert ein Claude-ähnliches UI-Design, blendet die angemeldete Kontokarte aus, passt das Seitenleisten-Branding an, erweitert die rechte Seitenleiste, klappt die linke beim Start ein und zeigt DeepSeek-Spitzen- und Nebenzeiten."
   }
 }

@@ -64,6 +64,7 @@
         "@miorin/dsh-hide-signed-in-card",
         "@miorin/dsh-sidebar-brand",
         "@miorin/dsh-aggressive-sidebar",
+        "@miorin/dsh-subtle-sidebar",
         "@miorin/dsh-peak-pricing-sidebar"
       ],
       "defaults": {
@@ -71,6 +72,7 @@
         "@miorin/dsh-hide-signed-in-card": true,
         "@miorin/dsh-sidebar-brand": true,
         "@miorin/dsh-aggressive-sidebar": true,
+        "@miorin/dsh-subtle-sidebar": true,
         "@miorin/dsh-peak-pricing-sidebar": true
       }
     }
@@ -80,6 +82,7 @@
     "@miorin/dsh-sidebar-brand": "link:../dsh-sidebar-brand",
     "@miorin/dsh-aggressive-sidebar": "link:../dsh-aggressive-sidebar",
     "@miorin/dsh-peak-pricing-sidebar": "link:../dsh-peak-pricing-sidebar",
-    "@miorin/dsh-claudelike-ui": "link:../dsh-claudelike-ui"
+    "@miorin/dsh-claudelike-ui": "link:../dsh-claudelike-ui",
+    "@miorin/dsh-subtle-sidebar": "link:../dsh-subtle-sidebar"
   }
 }

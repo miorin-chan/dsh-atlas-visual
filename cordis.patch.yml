@@ -14,6 +14,9 @@
     # @miorin/dsh-aggressive-sidebar
     - id: dsh-aggressive-sidebar
       name: '@miorin/dsh-aggressive-sidebar'
+    # @miorin/dsh-subtle-sidebar
+    - id: dsh-subtle-sidebar
+      name: '@miorin/dsh-subtle-sidebar'
     # @miorin/dsh-peak-pricing-sidebar
     - id: dsh-peak-pricing-sidebar
       name: '@miorin/dsh-peak-pricing-sidebar'
