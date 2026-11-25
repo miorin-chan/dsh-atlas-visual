@@ -6,5 +6,3 @@
 /.prek/
 *.tgz
 .DS_Store
-/index.js
-/client.js

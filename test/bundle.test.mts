@@ -39,7 +39,8 @@ function parseInsertRows(patch: string) {
 test('inserts the six plugin rows in order plus the aggregate runtime row', async () => {
   const manifest = JSON.parse(await read('package.json'))
   const names = members.map(member => member.name)
-  assert.equal(manifest.private, true)
+  assert.notEqual(manifest.private, true)
+  assert.equal(manifest.publishConfig?.access, 'public')
   assert.equal(manifest.exports['.'], './index.js')
   assert.equal(manifest.exports['./client'], './client.js')
   assert.deepEqual(manifest.dsh.bundle, { patch: './cordis.patch.yml' })
@@ -60,10 +61,14 @@ test('inserts the six plugin rows in order plus the aggregate runtime row', asyn
 })
 
 for (const { dir, name } of members) {
-  test(`resolves ${name} from its sibling checkout`, async () => {
-    const checkout = await realpath(new URL(`../${dir}/`, root))
+  test(`resolves ${name} runtime exports`, async () => {
+    const pkg = JSON.parse(await read('package.json'))
+    const spec = pkg.dependencies?.[name]
     const installed = await realpath(new URL(`node_modules/${name}/`, root))
-    assert.equal(installed, checkout)
+    if (typeof spec === 'string' && spec.startsWith('link:')) {
+      const checkout = await realpath(new URL(`../${dir}/`, root))
+      assert.equal(installed, checkout)
+    }
     const manifest = JSON.parse(await read(`node_modules/${name}/package.json`))
     assert.equal(manifest.name, name)
     for (const entry of [name, `${name}/client`, `${name}/locale/en.json`, `${name}/icon`]) {

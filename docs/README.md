@@ -7,20 +7,20 @@
 自动把成员在 `plugins.bundle.config` 注册的设置汇总到详情页。
 一个 profile 只能选用同一行 ID 的一种装载方式。
 
-## 本地准备
+## 准备与兼容
 
-本包私有，不发布到 npm。目标 DSH 版本为 `0.2.2-rc.5` 或更新版本。
+包名 `@miorin/dsh-atlas-visual` 发布至 npm。目标 DSH 版本为 `0.2.2-rc.5` 或更新版本。
 源码准备需要 Node.js 22.18 或更新的 22.x 版本，或 24.11 及更新版本，以及 pnpm。
-六个同级源码目录 `../dsh-claudelike-ui`、`../dsh-hide-signed-in-card`、`../dsh-sidebar-brand`、
+本地联调时，六个同级源码目录 `../dsh-claudelike-ui`、`../dsh-hide-signed-in-card`、`../dsh-sidebar-brand`、
 `../dsh-aggressive-sidebar`、`../dsh-subtle-sidebar` 与 `../dsh-peak-pricing-sidebar` 须已完成各自的构建。
-在本目录运行 `pnpm install --frozen-lockfile`，安装会在本目录建立链接并生成聚合文件。
+在本目录运行 `pnpm install --frozen-lockfile`，安装会在本目录建立依赖并生成聚合文件。
 安装至 DSH 的入口见[用户说明](../README.zh.md)。
 
 ## 维护与校验
 
 本包使用默认工作区的 `tools/dsh-aggregate` 生成聚合文件。
 变更成员时先编辑清单，再运行生成命令、更新锁文件并校验。
-提交清单、生成的 patch、包清单及锁文件；`index.js` 与 `client.js` 由 Git 忽略并在 `prepare` 或 `build` 时生成。
+提交清单、生成的 patch、包清单、锁文件以及生成的运行时入口（`index.js`、`client.js`），以便独立仓库 CI 无需工作区工具即可校验和发布。
 
 - `pnpm test` 重新生成，然后运行全部检查。
 - `pnpm run check` 只读检查生成文件是否有漂移，并用本地测试检查原生行及成员入口解析。
