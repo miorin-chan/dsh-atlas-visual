@@ -1,4 +1,8 @@
 /node_modules/
+/index.js
+/client.js
+/scripts/build.mjs
+/scripts/sync-types.mjs
 /.npm-cache/
 /.pnpm-cache/
 /.pnpm-state/

@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFile, realpath, stat } from 'node:fs/promises'
 import { test } from 'node:test'
 import { fileURLToPath } from 'node:url'
+import vm from 'node:vm'
 
 const root = new URL('../', import.meta.url)
 const members = [
@@ -87,4 +88,44 @@ test('declares packaged English and Chinese meta.detail documents', async () => 
     assert.ok(manifest.files.includes(detail), `${detail} should be listed in package.json files`)
     assert.ok((await stat(fileURLToPath(new URL(detail, root)))).isFile(), detail)
   }
+})
+
+test('loads built index.js and client.js via ModuleLoader envelope', async () => {
+  const hostMod = await import(new URL('index.js', root).href) as { name?: unknown; apply?: unknown }
+  assert.equal(hostMod.name, '@miorin/dsh-atlas-visual')
+  assert.equal(typeof hostMod.apply, 'function')
+
+  const clientCode = await read('client.js')
+  let loaded: { id: string; factory: (req: (id: string) => unknown) => Record<string, unknown> } | undefined
+  vm.runInNewContext(clientCode, {
+    window: { __ModuleLoader__: { load(payload: typeof loaded) { loaded = payload } } },
+  })
+  assert.equal(loaded?.id, '@miorin/dsh-atlas-visual')
+  const mod = loaded!.factory(id => {
+    if (id === 'react') {
+      return {
+        Fragment: Symbol('Fragment'),
+        createElement: () => null,
+        useEffect: () => {},
+        useId: () => 'id',
+        useRef: (v: unknown) => ({ current: v }),
+        useState: (v: unknown) => [v, () => {}],
+        useSyncExternalStore: (_sub: unknown, get: () => unknown) => get(),
+      }
+    }
+    if (id === '@deepseek-ai/dsh-client-ui-primitives') {
+      return {
+        Button: () => null,
+        IconChevronRightOutlineRegular: () => null,
+        IconChevronsUpDownOutlineMedium: () => null,
+        Modal: () => null,
+        PluginArtworkSubagent: () => null,
+        Switch: () => null,
+        Tooltip: ({ children }: { children: unknown }) => children,
+      }
+    }
+    throw new Error(`unexpected require: ${id}`)
+  }) as { inject: readonly string[]; apply: (ctx: unknown) => void }
+  assert.deepEqual([...mod.inject], ['locale', 'slots', 'remote', 'remote.pluginManager'])
+  assert.equal(typeof mod.apply, 'function')
 })
