@@ -1,6 +1,7 @@
 {
   "name": "@miorin/dsh-atlas-visual",
   "version": "0.1.0",
+  "private": false,
   "license": "MIT",
   "type": "module",
   "description": "Customize DeepSeek Harness appearance with a Claude-like skin, sidebar brand and account card tweaks, wider right sidebar layouts, and DeepSeek pricing hours.",
