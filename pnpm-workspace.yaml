@@ -4,3 +4,11 @@ storeDir: .pnpm-store
 # esbuild uses the platform binary from its optional dependencies.
 allowBuilds:
   'esbuild@0.28.2': false
+
+minimumReleaseAgeExclude:
+  - '@miorin/dsh-aggressive-sidebar@0.1.0'
+  - '@miorin/dsh-claudelike-ui@1.0.0'
+  - '@miorin/dsh-hide-signed-in-card@0.1.0'
+  - '@miorin/dsh-peak-pricing-sidebar@0.1.0'
+  - '@miorin/dsh-sidebar-brand@0.1.0'
+  - '@miorin/dsh-subtle-sidebar@0.1.0'

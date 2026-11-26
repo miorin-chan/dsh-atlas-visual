@@ -9,20 +9,60 @@ importers:
   .:
     dependencies:
       '@miorin/dsh-aggressive-sidebar':
-        specifier: link:../dsh-aggressive-sidebar
-        version: link:../dsh-aggressive-sidebar
+        specifier: 0.1.0
+        version: 0.1.0
       '@miorin/dsh-claudelike-ui':
-        specifier: link:../dsh-claudelike-ui
-        version: link:../dsh-claudelike-ui
+        specifier: 1.0.0
+        version: 1.0.0
       '@miorin/dsh-hide-signed-in-card':
-        specifier: link:../dsh-hide-signed-in-card
-        version: link:../dsh-hide-signed-in-card
+        specifier: 0.1.0
+        version: 0.1.0
       '@miorin/dsh-peak-pricing-sidebar':
-        specifier: link:../dsh-peak-pricing-sidebar
-        version: link:../dsh-peak-pricing-sidebar
+        specifier: 0.1.0
+        version: 0.1.0
       '@miorin/dsh-sidebar-brand':
-        specifier: link:../dsh-sidebar-brand
-        version: link:../dsh-sidebar-brand
+        specifier: 0.1.0
+        version: 0.1.0
       '@miorin/dsh-subtle-sidebar':
-        specifier: link:../dsh-subtle-sidebar
-        version: link:../dsh-subtle-sidebar
+        specifier: 0.1.0
+        version: 0.1.0
+
+packages:
+
+  '@miorin/dsh-aggressive-sidebar@0.1.0':
+    resolution: {integrity: sha512-5BCU420tl8wWWRB2alEVdoDQF1nnNOcp7wjxxCVR++Mh+bOCAkOb+5iYDzInzycsRoZ5NlxCVpUS16/GKuCgKg==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+  '@miorin/dsh-claudelike-ui@1.0.0':
+    resolution: {integrity: sha512-oLcI65oQf70tKsHmqvdjzSgaB7HPGUiYfSL+zD6o2lnP3nQ5pqlL4bty68VyEh1fLDaUEf3mb0aO4H1wP8/57A==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+  '@miorin/dsh-hide-signed-in-card@0.1.0':
+    resolution: {integrity: sha512-zS1cSjrpBJJT/UE4jQ5XZJcDJAFUSbe2gYQruxjz/mLLZGmoRUs8WB4yxrISZFkV3CzIQeKlTVk3aSAZ6ajsqg==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+  '@miorin/dsh-peak-pricing-sidebar@0.1.0':
+    resolution: {integrity: sha512-hCc3Q1t9dP+m1t9vw/6bmSjOUnOopRBBHGhXRKuqfklMKuRnvFf+dx6P+2LwxQWQL1rZrM9nkuvWwCDn6u/L7A==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+  '@miorin/dsh-sidebar-brand@0.1.0':
+    resolution: {integrity: sha512-z43NZvG4rHGd8Hm0J6uqq2qN/gGr2oujlxprAWMjuRSQ5V933OTSeZ6AgHig6CYYL7ScLez4+VMIHJEqjZhMuA==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+  '@miorin/dsh-subtle-sidebar@0.1.0':
+    resolution: {integrity: sha512-6eafvtLSlrri+f5ZVWTKHQwZ002AmudHEFLYDuhHZSrYdvSpLDaqzmGb6ICQ5Bpnz6Y+wxIwiaNZbKb40Cajaw==}
+    engines: {dsh: '>=0.2.2-rc.5'}
+
+snapshots:
+
+  '@miorin/dsh-aggressive-sidebar@0.1.0': {}
+
+  '@miorin/dsh-claudelike-ui@1.0.0': {}
+
+  '@miorin/dsh-hide-signed-in-card@0.1.0': {}
+
+  '@miorin/dsh-peak-pricing-sidebar@0.1.0': {}
+
+  '@miorin/dsh-sidebar-brand@0.1.0': {}
+
+  '@miorin/dsh-subtle-sidebar@0.1.0': {}

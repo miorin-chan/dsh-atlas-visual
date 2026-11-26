@@ -8,20 +8,20 @@ engines:
   node: '^22.18.0 || >=24.11.0'
 plugins:
   - name: '@miorin/dsh-claudelike-ui'
-    spec: link:../dsh-claudelike-ui
+    spec: 1.0.0
     enabled: true
   - name: '@miorin/dsh-hide-signed-in-card'
-    spec: link:../dsh-hide-signed-in-card
+    spec: 0.1.0
     enabled: true
   - name: '@miorin/dsh-sidebar-brand'
-    spec: link:../dsh-sidebar-brand
+    spec: 0.1.0
     enabled: true
   - name: '@miorin/dsh-aggressive-sidebar'
-    spec: link:../dsh-aggressive-sidebar
+    spec: 0.1.0
     enabled: true
   - name: '@miorin/dsh-subtle-sidebar'
-    spec: link:../dsh-subtle-sidebar
+    spec: 0.1.0
     enabled: true
   - name: '@miorin/dsh-peak-pricing-sidebar'
-    spec: link:../dsh-peak-pricing-sidebar
+    spec: 0.1.0
     enabled: true

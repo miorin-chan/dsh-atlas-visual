@@ -77,12 +77,12 @@
     }
   },
   "dependencies": {
-    "@miorin/dsh-hide-signed-in-card": "link:../dsh-hide-signed-in-card",
-    "@miorin/dsh-sidebar-brand": "link:../dsh-sidebar-brand",
-    "@miorin/dsh-aggressive-sidebar": "link:../dsh-aggressive-sidebar",
-    "@miorin/dsh-peak-pricing-sidebar": "link:../dsh-peak-pricing-sidebar",
-    "@miorin/dsh-claudelike-ui": "link:../dsh-claudelike-ui",
-    "@miorin/dsh-subtle-sidebar": "link:../dsh-subtle-sidebar"
+    "@miorin/dsh-hide-signed-in-card": "0.1.0",
+    "@miorin/dsh-sidebar-brand": "0.1.0",
+    "@miorin/dsh-aggressive-sidebar": "0.1.0",
+    "@miorin/dsh-peak-pricing-sidebar": "0.1.0",
+    "@miorin/dsh-claudelike-ui": "1.0.0",
+    "@miorin/dsh-subtle-sidebar": "0.1.0"
   },
   "publishConfig": {
     "access": "public",
