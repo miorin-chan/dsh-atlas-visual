@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "Visual Modular Improvement Plan",
-    "description": "Apply a Claude-like UI skin, hide the signed-in account card, customize or hide the sidebar brand, widen the right sidebar layout, start with the left sidebar collapsed, and show DeepSeek peak and off-peak pricing hours."
+    "description": "Apply a Claude-like UI skin, hide the signed-in account card, customize or hide the sidebar brand, widen the right sidebar layout, start with the left sidebar collapsed, and show DeepSeek peak and off-peak pricing hours.",
+    "detail": "README.md"
   }
 }

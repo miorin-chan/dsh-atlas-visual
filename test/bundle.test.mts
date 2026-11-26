@@ -76,3 +76,15 @@ for (const { dir, name } of members) {
     }
   })
 }
+
+test('declares packaged English and Chinese meta.detail documents', async () => {
+  const manifest = JSON.parse(await read('package.json'))
+  const en = JSON.parse(await read('locale/en.json'))
+  const zh = JSON.parse(await read('locale/zh.json'))
+  assert.equal(en.meta.detail, 'README.md')
+  assert.equal(zh.meta.detail, 'README.zh.md')
+  for (const detail of [en.meta.detail, zh.meta.detail]) {
+    assert.ok(manifest.files.includes(detail), `${detail} should be listed in package.json files`)
+    assert.ok((await stat(fileURLToPath(new URL(detail, root)))).isFile(), detail)
+  }
+})

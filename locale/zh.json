@@ -1,6 +1,7 @@
 {
   "meta": {
     "title": "外观模块化改良计划",
-    "description": "切换为 Claude 风格 UI 皮肤、登录后隐藏账号卡片、自定义或隐藏侧栏品牌、展开右侧栏、启动时收起左侧栏，并在侧栏显示 DeepSeek 峰谷时间。"
+    "description": "切换为 Claude 风格 UI 皮肤、登录后隐藏账号卡片、自定义或隐藏侧栏品牌、展开右侧栏、启动时收起左侧栏，并在侧栏显示 DeepSeek 峰谷时间。",
+    "detail": "README.zh.md"
   }
 }
