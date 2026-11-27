@@ -9,13 +9,13 @@ engines:
 plugins:
   - name: '@miorin/dsh-claudelike-ui'
     spec: 1.0.0
-    enabled: true
+    enabled: false
   - name: '@miorin/dsh-hide-signed-in-card'
     spec: 0.1.0
-    enabled: true
+    enabled: false
   - name: '@miorin/dsh-sidebar-brand'
     spec: 0.1.0
-    enabled: true
+    enabled: false
   - name: '@miorin/dsh-aggressive-sidebar'
     spec: 0.1.0
     enabled: true

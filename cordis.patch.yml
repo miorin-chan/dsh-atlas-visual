@@ -5,12 +5,15 @@
     # @miorin/dsh-claudelike-ui
     - id: dsh-claudelike-ui
       name: '@miorin/dsh-claudelike-ui'
+      disabled: true
     # @miorin/dsh-hide-signed-in-card
     - id: dsh-hide-signed-in-card
       name: '@miorin/dsh-hide-signed-in-card'
+      disabled: true
     # @miorin/dsh-sidebar-brand
     - id: dsh-sidebar-brand
       name: '@miorin/dsh-sidebar-brand'
+      disabled: true
     # @miorin/dsh-aggressive-sidebar
     - id: dsh-aggressive-sidebar
       name: '@miorin/dsh-aggressive-sidebar'

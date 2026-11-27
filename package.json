@@ -81,9 +81,9 @@
         "@miorin/dsh-peak-pricing-sidebar"
       ],
       "defaults": {
-        "@miorin/dsh-claudelike-ui": true,
-        "@miorin/dsh-hide-signed-in-card": true,
-        "@miorin/dsh-sidebar-brand": true,
+        "@miorin/dsh-claudelike-ui": false,
+        "@miorin/dsh-hide-signed-in-card": false,
+        "@miorin/dsh-sidebar-brand": false,
         "@miorin/dsh-aggressive-sidebar": true,
         "@miorin/dsh-subtle-sidebar": false,
         "@miorin/dsh-sidebar-shortcut-swap": false,

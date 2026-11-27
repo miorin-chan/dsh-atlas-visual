@@ -6,9 +6,9 @@ import vm from 'node:vm'
 
 const root = new URL('../', import.meta.url)
 const members = [
-  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: '@miorin/dsh-claudelike-ui', enabled: true },
-  { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card', enabled: true },
-  { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand', enabled: true },
+  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: '@miorin/dsh-claudelike-ui', enabled: false },
+  { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card', enabled: false },
+  { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand', enabled: false },
   { id: 'dsh-aggressive-sidebar', dir: 'dsh-aggressive-sidebar', name: '@miorin/dsh-aggressive-sidebar', enabled: true },
   { id: 'dsh-subtle-sidebar', dir: 'dsh-subtle-sidebar', name: '@miorin/dsh-subtle-sidebar', enabled: false },
   { id: 'dsh-sidebar-shortcut-swap', dir: 'dsh-sidebar-shortcut-swap', name: '@miorin/dsh-sidebar-shortcut-swap', enabled: false },

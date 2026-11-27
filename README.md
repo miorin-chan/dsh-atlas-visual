@@ -6,8 +6,9 @@ Visual Atlas brings seven appearance and sidebar tweaks together in one DeepSeek
 the Claude-like UI skin, hiding the signed-in account card, sidebar brand customization,
 Aggressive sidebar, [Subtle sidebar](../dsh-subtle-sidebar/README.md),
 [Flipped sidebars](../dsh-sidebar-shortcut-swap/README.md), and the DeepSeek peak pricing timeline.
-Subtle sidebar and Flipped sidebars are disabled by default so left-sidebar startup collapse
-and shortcut swapping are opt-in.
+Aggressive sidebar and the peak pricing timeline are enabled by default, while the strong visual
+overrides (Claude-like UI skin, hiding the signed-in account card, sidebar brand customization) as
+well as Subtle sidebar and Flipped sidebars default off so visual and shortcut changes are opt-in.
 Each plugin row has an independent switch, and settings for sidebar brand, aggressive sidebar,
 and peak pricing appear together on the bundle page.
 
