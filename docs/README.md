@@ -4,18 +4,20 @@
 - [中文用户说明](../README.zh.md) · [English README](../README.md)：安装与使用说明。
 
 聚合包在插件页提供一张卡，卡内使用 DSH 原生插件行。
-成员顺序依次为 Claude 风格 UI 皮肤、登录后隐藏账号卡片、侧栏品牌、激进侧边栏、低调侧边栏和峰谷时间。
-[清单](../aggregate.yml)声明成员及其 `link:` 来源。
-生成的 [patch](../cordis.patch.yml)保留成员自己的行 ID、包名和配置，并追加聚合运行时行，
-自动把成员在 `plugins.bundle.config` 注册的设置汇总到详情页。
+成员顺序依次为 Claude 风格 UI 皮肤、登录后隐藏账号卡片、侧栏品牌、激进侧边栏、
+低调侧边栏（默认关闭）、倒反天罡（默认关闭）和峰谷时间。
+[清单](../aggregate.yml)声明成员及其版本或 `link:` 来源。
+生成的 [patch](../cordis.patch.yml)保留成员自己的行 ID、包名和配置，为默认关闭的成员写入 `disabled: true`，
+并追加聚合运行时行，自动把成员在 `plugins.bundle.config` 注册的设置汇总到详情页。
 一个 profile 只能选用同一行 ID 的一种装载方式。
 
 ## 准备与兼容
 
 包名 `@miorin/dsh-atlas-visual` 发布至 npm。目标 DSH 版本为 `0.2.2-rc.5` 或更新版本。
 源码准备需要 Node.js 22.18 或更新的 22.x 版本，或 24.11 及更新版本，以及 pnpm。
-本地联调时，六个同级源码目录 `../dsh-claudelike-ui`、`../dsh-hide-signed-in-card`、`../dsh-sidebar-brand`、
-`../dsh-aggressive-sidebar`、`../dsh-subtle-sidebar` 与 `../dsh-peak-pricing-sidebar` 须已完成各自的构建。
+本地联调时，七个同级源码目录 `../dsh-claudelike-ui`、`../dsh-hide-signed-in-card`、
+`../dsh-sidebar-brand`、`../dsh-aggressive-sidebar`、`../dsh-subtle-sidebar`、
+`../dsh-sidebar-shortcut-swap` 与 `../dsh-peak-pricing-sidebar` 须已完成各自的构建。
 在本目录运行 `pnpm install --frozen-lockfile`，安装会在本目录建立依赖并生成聚合文件。
 安装至 DSH 的入口见[用户说明](../README.zh.md)。
 

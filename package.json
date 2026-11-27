@@ -4,7 +4,7 @@
   "private": false,
   "license": "MIT",
   "type": "module",
-  "description": "Customize DeepSeek Harness appearance with a Claude-like skin, sidebar brand and account card tweaks, wider right sidebar layouts, and DeepSeek pricing hours.",
+  "description": "Customize DeepSeek Harness appearance with a Claude-like skin, sidebar brand and account card tweaks, wider right sidebar layouts, optional sidebar shortcut swapping, and DeepSeek pricing hours.",
   "keywords": [
     "deepseek-harness",
     "dsh",
@@ -77,6 +77,7 @@
         "@miorin/dsh-sidebar-brand",
         "@miorin/dsh-aggressive-sidebar",
         "@miorin/dsh-subtle-sidebar",
+        "@miorin/dsh-sidebar-shortcut-swap",
         "@miorin/dsh-peak-pricing-sidebar"
       ],
       "defaults": {
@@ -84,7 +85,8 @@
         "@miorin/dsh-hide-signed-in-card": true,
         "@miorin/dsh-sidebar-brand": true,
         "@miorin/dsh-aggressive-sidebar": true,
-        "@miorin/dsh-subtle-sidebar": true,
+        "@miorin/dsh-subtle-sidebar": false,
+        "@miorin/dsh-sidebar-shortcut-swap": false,
         "@miorin/dsh-peak-pricing-sidebar": true
       }
     }
@@ -95,7 +97,8 @@
     "@miorin/dsh-aggressive-sidebar": "0.1.0",
     "@miorin/dsh-peak-pricing-sidebar": "0.1.0",
     "@miorin/dsh-claudelike-ui": "1.0.0",
-    "@miorin/dsh-subtle-sidebar": "0.1.0"
+    "@miorin/dsh-subtle-sidebar": "link:../dsh-subtle-sidebar",
+    "@miorin/dsh-sidebar-shortcut-swap": "link:../dsh-sidebar-shortcut-swap"
   },
   "publishConfig": {
     "access": "public",

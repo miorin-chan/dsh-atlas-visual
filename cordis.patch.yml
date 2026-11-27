@@ -17,6 +17,11 @@
     # @miorin/dsh-subtle-sidebar
     - id: dsh-subtle-sidebar
       name: '@miorin/dsh-subtle-sidebar'
+      disabled: true
+    # @miorin/dsh-sidebar-shortcut-swap
+    - id: dsh-sidebar-shortcut-swap
+      name: '@miorin/dsh-sidebar-shortcut-swap'
+      disabled: true
     # @miorin/dsh-peak-pricing-sidebar
     - id: dsh-peak-pricing-sidebar
       name: '@miorin/dsh-peak-pricing-sidebar'

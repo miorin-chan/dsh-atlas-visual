@@ -6,38 +6,52 @@ import vm from 'node:vm'
 
 const root = new URL('../', import.meta.url)
 const members = [
-  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: '@miorin/dsh-claudelike-ui' },
-  { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card' },
-  { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand' },
-  { id: 'dsh-aggressive-sidebar', dir: 'dsh-aggressive-sidebar', name: '@miorin/dsh-aggressive-sidebar' },
-  { id: 'dsh-subtle-sidebar', dir: 'dsh-subtle-sidebar', name: '@miorin/dsh-subtle-sidebar' },
-  { id: 'dsh-peak-pricing-sidebar', dir: 'dsh-peak-pricing-sidebar', name: '@miorin/dsh-peak-pricing-sidebar' },
+  { id: 'dsh-claudelike-ui', dir: 'dsh-claudelike-ui', name: '@miorin/dsh-claudelike-ui', enabled: true },
+  { id: 'dsh-hide-signed-in-card', dir: 'dsh-hide-signed-in-card', name: '@miorin/dsh-hide-signed-in-card', enabled: true },
+  { id: 'dsh-sidebar-brand', dir: 'dsh-sidebar-brand', name: '@miorin/dsh-sidebar-brand', enabled: true },
+  { id: 'dsh-aggressive-sidebar', dir: 'dsh-aggressive-sidebar', name: '@miorin/dsh-aggressive-sidebar', enabled: true },
+  { id: 'dsh-subtle-sidebar', dir: 'dsh-subtle-sidebar', name: '@miorin/dsh-subtle-sidebar', enabled: false },
+  { id: 'dsh-sidebar-shortcut-swap', dir: 'dsh-sidebar-shortcut-swap', name: '@miorin/dsh-sidebar-shortcut-swap', enabled: false },
+  { id: 'dsh-peak-pricing-sidebar', dir: 'dsh-peak-pricing-sidebar', name: '@miorin/dsh-peak-pricing-sidebar', enabled: true },
 ]
 
 const read = (path: string) => readFile(new URL(path, root), 'utf8')
 
 function parseInsertRows(patch: string) {
-  const rows: Array<{ id: string; name: string }> = []
-  let current: { id?: string; name?: string } | undefined
+  const rows: Array<{ id: string; name: string; disabled?: boolean }> = []
+  let current: { id?: string; name?: string; disabled?: boolean } | undefined
+  const push = () => {
+    if (current === undefined) return
+    rows.push({
+      id: current.id ?? '',
+      name: current.name ?? '',
+      ...(current.disabled === undefined ? {} : { disabled: current.disabled }),
+    })
+  }
   for (const rawLine of patch.split(/\r?\n/u)) {
     const line = rawLine.trim()
     if (line === '' || line.startsWith('#') || line === '- insert:') continue
     const idMatch = line.match(/^- id:\s*(.+)$/u)
     if (idMatch) {
-      if (current !== undefined) rows.push({ id: current.id ?? '', name: current.name ?? '' })
+      push()
       current = { id: idMatch[1].replace(/^['"]|['"]$/gu, '') }
       continue
     }
+    if (current === undefined) continue
     const nameMatch = line.match(/^name:\s*(.+)$/u)
-    if (nameMatch && current !== undefined) {
+    if (nameMatch) {
       current.name = nameMatch[1].replace(/^['"]|['"]$/gu, '')
+      continue
+    }
+    if (/^disabled:\s*true$/u.test(line)) {
+      current.disabled = true
     }
   }
-  if (current !== undefined) rows.push({ id: current.id ?? '', name: current.name ?? '' })
+  push()
   return rows
 }
 
-test('inserts the six plugin rows in order plus the aggregate runtime row', async () => {
+test('inserts the seven plugin rows in order plus the aggregate runtime row', async () => {
   const manifest = JSON.parse(await read('package.json'))
   const names = members.map(member => member.name)
   assert.notEqual(manifest.private, true)
@@ -51,11 +65,11 @@ test('inserts the six plugin rows in order plus the aggregate runtime row', asyn
     version: 1,
     runtimeRowId: 'dsh-atlas-visual',
     plugins: names,
-    defaults: Object.fromEntries(names.map(name => [name, true])),
+    defaults: Object.fromEntries(members.map(member => [member.name, member.enabled])),
   })
   const rows = parseInsertRows(await read(manifest.dsh.bundle.patch))
   assert.deepEqual(rows, [
-    ...members.map(({ id, name }) => ({ id, name })),
+    ...members.map(({ id, name, enabled }) => ({ id, name, ...(enabled ? {} : { disabled: true }) })),
     { id: 'dsh-atlas-visual', name: '@miorin/dsh-atlas-visual' },
   ])
   assert.equal(new Set(rows.map(row => row.id)).size, rows.length)

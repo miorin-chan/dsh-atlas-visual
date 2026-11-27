@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Plan d’amélioration modulaire de l’apparence",
-    "description": "Applique un thème inspiré de Claude, masque la carte du compte connecté, personnalise ou masque la marque de la barre latérale, élargit la barre latérale droite, replie la gauche au démarrage et affiche les heures pleines et creuses de DeepSeek."
+    "description": "Applique un thème inspiré de Claude, masque la carte du compte connecté, personnalise ou masque la marque de la barre latérale, élargit la barre latérale droite, permet de replier la gauche au démarrage ou d’inverser leurs raccourcis et affiche les heures pleines et creuses de DeepSeek."
   }
 }

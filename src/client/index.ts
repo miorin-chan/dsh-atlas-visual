@@ -9,6 +9,7 @@ const runtime = createAggregateClient({
     "@miorin/dsh-sidebar-brand",
     "@miorin/dsh-aggressive-sidebar",
     "@miorin/dsh-subtle-sidebar",
+    "@miorin/dsh-sidebar-shortcut-swap",
     "@miorin/dsh-peak-pricing-sidebar",
   ],
   defaults: {
@@ -16,7 +17,8 @@ const runtime = createAggregateClient({
     "@miorin/dsh-hide-signed-in-card": true,
     "@miorin/dsh-sidebar-brand": true,
     "@miorin/dsh-aggressive-sidebar": true,
-    "@miorin/dsh-subtle-sidebar": true,
+    "@miorin/dsh-subtle-sidebar": false,
+    "@miorin/dsh-sidebar-shortcut-swap": false,
     "@miorin/dsh-peak-pricing-sidebar": true,
   },
 })

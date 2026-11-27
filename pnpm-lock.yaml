@@ -23,9 +23,12 @@ importers:
       '@miorin/dsh-sidebar-brand':
         specifier: 0.1.0
         version: 0.1.0
+      '@miorin/dsh-sidebar-shortcut-swap':
+        specifier: link:../dsh-sidebar-shortcut-swap
+        version: link:../dsh-sidebar-shortcut-swap
       '@miorin/dsh-subtle-sidebar':
-        specifier: 0.1.0
-        version: 0.1.0
+        specifier: link:../dsh-subtle-sidebar
+        version: link:../dsh-subtle-sidebar
     devDependencies:
       '@deepseek-ai/cordis':
         specifier: 4.1.0
@@ -249,10 +252,6 @@ packages:
     resolution: {integrity: sha512-z43NZvG4rHGd8Hm0J6uqq2qN/gGr2oujlxprAWMjuRSQ5V933OTSeZ6AgHig6CYYL7ScLez4+VMIHJEqjZhMuA==}
     engines: {dsh: '>=0.2.2-rc.5'}
 
-  '@miorin/dsh-subtle-sidebar@0.1.0':
-    resolution: {integrity: sha512-6eafvtLSlrri+f5ZVWTKHQwZ002AmudHEFLYDuhHZSrYdvSpLDaqzmGb6ICQ5Bpnz6Y+wxIwiaNZbKb40Cajaw==}
-    engines: {dsh: '>=0.2.2-rc.5'}
-
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
@@ -374,8 +373,6 @@ snapshots:
   '@miorin/dsh-peak-pricing-sidebar@0.1.0': {}
 
   '@miorin/dsh-sidebar-brand@0.1.0': {}
-
-  '@miorin/dsh-subtle-sidebar@0.1.0': {}
 
   '@standard-schema/spec@1.1.0': {}
 

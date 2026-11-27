@@ -8,5 +8,4 @@ minimumReleaseAgeExclude:
   - '@miorin/dsh-hide-signed-in-card@0.1.0'
   - '@miorin/dsh-peak-pricing-sidebar@0.1.0'
   - '@miorin/dsh-sidebar-brand@0.1.0'
-  - '@miorin/dsh-subtle-sidebar@0.1.0'
   - '@miorin/dsh-aggregate@0.1.0'
