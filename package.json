@@ -29,6 +29,7 @@
     "README.zh.md",
     "AGENTS.md",
     "AGENTS.local.md",
+    "DESIGN.md",
     "docs/README.md"
   ],
   "engines": {
